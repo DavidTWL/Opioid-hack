@@ -24,6 +24,19 @@ HomeStack.navigationOptions = {
     />
   ),
 };
+HomeStack.navigationOptions = {
+  tabBarLabel: 'Forum',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={
+        Platform.OS === 'ios'
+          ? `ios-chatboxes${focused ? '' : '-outline'}`
+          : 'md-chatboxes'
+      }
+    />
+  ),
+};
 
 const LinksStack = createStackNavigator({
   Links: LinksScreen,
@@ -52,6 +65,7 @@ SettingsStack.navigationOptions = {
     />
   ),
 };
+
 
 export default createBottomTabNavigator({
   HomeStack,
