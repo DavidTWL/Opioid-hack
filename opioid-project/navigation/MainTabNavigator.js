@@ -8,7 +8,7 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+  Home: HomeScre  en,
 });
 
 HomeStack.navigationOptions = {
@@ -24,7 +24,8 @@ HomeStack.navigationOptions = {
     />
   ),
 };
-HomeStack.navigationOptions = {
+
+ForumStack.navigationOptions = {
   tabBarLabel: 'Forum',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -68,6 +69,7 @@ SettingsStack.navigationOptions = {
 
 
 export default createBottomTabNavigator({
+  ForumStack,
   HomeStack,
   LinksStack,
   SettingsStack,
